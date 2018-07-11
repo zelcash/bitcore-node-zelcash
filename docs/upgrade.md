@@ -48,7 +48,7 @@ To start reindexing add `reindex=1` during the **first startup only**.
     "bitcoind": {
       "spawn": {
         "datadir": "/home/<username>/.bitcoin",
-        "exec": "/home/<username>/bitcore-node/bin/zelcashd"
+        "exec": "/home/<username>/bitcore-node/bin/bitcored"
       }
     }
   }

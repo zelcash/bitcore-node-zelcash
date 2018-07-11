@@ -1,20 +1,20 @@
-Bitcore Node ZelCash
+Bitcore Node BitCore
 ============
 
-A ZelCash full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to ~~[Bitcoin Core with additional indexing](https://github.com/bitpay/bitcoin/tree/0.12.1-bitcore)~~ for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A BitCore full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to ~~[Bitcoin Core with additional indexing](https://github.com/bitpay/bitcoin/tree/0.12.1-bitcore)~~ for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
 ```bash
-git clone https://github.com/TheTrunk/bitcore-node-zelcash.git
-cd bitcore-node-zelcash
+git clone https://github.com/BTXinsight/bitcore-node-btx.git
+cd bitcore-node-btx
 npm install
 bitcore-node start
 ```
 
 ## Prerequisites
 
-- GNU/Linux x86_32/x86_64, or OSX 64bit *(for zelcashd distributed binaries)*
+- GNU/Linux x86_32/x86_64, or OSX 64bit *(for bitcored distributed binaries)*
 - Node.js v0.10, v0.12 or v4
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~30GB of disk storage
@@ -37,8 +37,8 @@ This will create a directory with configuration files for your node and install 
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/TheTrunk/insight-api-zelcash)
-- [Insight UI](https://github.com/TheTrunk/insight-ui-zelcash)
+- [Insight API](https://github.com/BTXinsight/insight-api-btx)
+- [Insight UI](https://github.com/BTXinsight/insight-ui-btx)
 
 ## Documentation
 

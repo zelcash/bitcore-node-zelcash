@@ -49,7 +49,7 @@ var myNode = new bitcore.Node({
       config: {
         spawn: {
           datadir: '/home/<username>/.bitcoin',
-          exec: '/home/<username>/bitcore-node/bin/zelcashd'
+          exec: '/home/<username>/bitcore-node/bin/bitcored'
         }
       }
     },
