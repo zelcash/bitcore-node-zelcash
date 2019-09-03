@@ -1,8 +1,17 @@
 Bitcore Node ZelCash
 ============
 
-A ZelCash full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to ~~[Bitcoin Core with additional indexing](https://github.com/bitpay/bitcoin/tree/0.12.1-bitcore)~~ for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A ZelCash full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
+## Explorer Guide
+### Part 1. Zelcash with extended RPC functionalities
+```bash
+wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installZelcashd.sh | bash
+```
+### Part 2. Latest Zelcash insight explorer = bitcore-node-zelcash with insight-api and insight-ui
+```bash
+wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installExplorer.sh | bash
+```
 ## Install
 
 ```bash
@@ -37,8 +46,8 @@ This will create a directory with configuration files for your node and install 
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/TheTrunk/insight-api-zelcash)
-- [Insight UI](https://github.com/TheTrunk/insight-ui-zelcash)
+- [Insight API](https://github.com/TheTrunk/insight-api)
+- [Insight UI](https://github.com/TheTrunk/insight-ui)
 
 ## Documentation
 
