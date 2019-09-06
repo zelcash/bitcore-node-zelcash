@@ -15,4 +15,4 @@ cd zelcashBitcore
 ./zcutil/build.sh -j$(nproc)
 cd
 echo "Zelcashd with extended RPC functionalities is prepared. Please run following command to install insight explorer for zelcash"
-echo "wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installExplorer.sh | bash"
+echo "wget -qO- https://raw.githubusercontent.com/zelcash/bitcore-node-zelcash/master/installExplorer.sh | bash"
