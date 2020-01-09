@@ -47,8 +47,8 @@ describe('WebService', function() {
       web3.enableSocketRPC.should.equal(WebService.DEFAULT_SOCKET_RPC);
     });
     it('will set configuration options for max payload', function() {
-      var web = new WebService({node: defaultNode, jsonRequestLimit: '200kb'});
-      web.jsonRequestLimit.should.equal('200kb');
+      var web = new WebService({node: defaultNode, jsonRequestLimit: '2000kb'});
+      web.jsonRequestLimit.should.equal('2000kb');
     });
   });
 
