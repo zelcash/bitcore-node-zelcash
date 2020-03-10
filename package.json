@@ -1,7 +1,7 @@
 {
   "name": "bitcore-node-zelcash",
   "description": "Full node with extended capabilities using Bitcore and ZelCash",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "main": "./index.js",
   "repository": "git://github.com/zelcash/bitcore-node-zelcash.git",
   "homepage": "https://zel.cash",
