@@ -16,14 +16,20 @@ sudo apt-get install -y mongodb-org
 sudo systemctl enable mongod
 sudo service mongod start
 
-#bitcore-node-zelcash
+# Flux
+echo 'deb https://apt.runonflux.io/ '$(lsb_release -cs)' main' | sudo tee --append /etc/apt/sources.list.d/flux.list
+gpg --keyserver keyserver.ubuntu.com --recv 4B69CA27A986265D
+gpg --export 4B69CA27A986265D | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install flux
+
+#bitcore-node
 cd
-git clone https://github.com/zelcash/bitcore-node-zelcash
-cd bitcore-node-zelcash
+git clone https://github.com/runonflux/bitcore-node
+cd bitcore-node
 npm install
 cd bin
 chmod +x bitcore-node
-cp ~/zelcashBitcore/src/zelcashd ~/bitcore-node-zelcash/bin
 ./bitcore-node create mynode
 cd mynode
 
@@ -49,7 +55,7 @@ cat << EOF > bitcore-node.json
       "sendTxLog": "./data/pushtx.log",
       "spawn": {
         "datadir": "./data",
-        "exec": "../zelcashd",
+        "exec": "fluxd",
         "rpcqueue": 1000,
         "rpcport": 16124,
         "zmqpubrawtx": "tcp://127.0.0.1:28332",
@@ -61,7 +67,7 @@ cat << EOF > bitcore-node.json
                  "db": {
                    "host": "127.0.0.1",
                    "port": "27017",
-                   "database": "zelcash-api-livenet",
+                   "database": "flux-api-livenet",
                    "user": "",
                    "password": ""
           },
@@ -76,19 +82,21 @@ cat << EOF > bitcore-node.json
 EOF
 
 cd data
-cat << EOF > zelcash.conf
+cat << EOF > flux.conf
 server=1
 whitelist=127.0.0.1
 txindex=1
 addressindex=1
 timestampindex=1
 spentindex=1
+insightexplorer=1
+experimentalfeatures=1
 zmqpubrawtx=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
 rpcport=16124
 rpcallowip=127.0.0.1
-rpcuser=zelcash
-rpcpassword=myzelcashpassword
+rpcuser=flux
+rpcpassword=myfluxpassword
 uacomment=bitcore
 mempoolexpiry=24
 rpcworkqueue=1100
@@ -97,16 +105,14 @@ dbcache=1000
 maxtxfee=1.0
 dbmaxfilesize=64
 showmetrics=0
-addnode=explorer.zel.cash
-addnode=explorer2.zel.cash
-addnode=explorer.zelcash.online
-addnode=explorer.zel.zeltrez.io
+addnode=explorer.runonflux.io
+addnode=explorer.flux.zelcore.io
 EOF
 
 cd ..
 cd node_modules
-git clone https://github.com/zelcash/insight-api
-git clone https://github.com/zelcash/insight-ui
+git clone https://github.com/runonflux/insight-api
+git clone https://github.com/runonflux/insight-ui
 cd insight-api
 npm install
 cd ..

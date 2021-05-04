@@ -1,29 +1,25 @@
-Bitcore Node ZelCash
+Bitcore Node Flux
 ============
 
-A ZelCash full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Flux full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Explorer Guide
-### Part 1. Zelcash with extended RPC functionalities
+### Latest Flux insight explorer = Flux daaemon with bitcore-node with insight-api and insight-ui
 ```bash
-wget -qO- https://raw.githubusercontent.com/zelcash/bitcore-node-zelcash/master/installZelcashd.sh | bash
-```
-### Part 2. Latest Zelcash insight explorer = bitcore-node-zelcash with insight-api and insight-ui
-```bash
-wget -qO- https://raw.githubusercontent.com/zelcash/bitcore-node-zelcash/master/installExplorer.sh | bash
+wget -qO- https://raw.githubusercontent.com/runonflux/bitcore-node/master/installExplorer.sh | bash
 ```
 ## Install
 
 ```bash
-git clone https://github.com/zelcash/bitcore-node-zelcash.git
-cd bitcore-node-zelcash
+git clone https://github.com/runonflux/bitcore-node.git
+cd bitcore-node
 npm install
 bitcore-node start
 ```
 
 ## Prerequisites
 
-- GNU/Linux x86_32/x86_64, or OSX 64bit *(for zelcashd distributed binaries)*
+- GNU/Linux x86_32/x86_64, or OSX 64bit *(for fluxd distributed binaries)*
 - Node.js v0.10, v0.12 or v4
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~30GB of disk storage
@@ -46,8 +42,8 @@ This will create a directory with configuration files for your node and install 
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/zelcash/insight-api)
-- [Insight UI](https://github.com/zelcash/insight-ui)
+- [Insight API](https://github.com/runonflux/insight-api)
+- [Insight UI](https://github.com/runonflux/insight-ui)
 
 ## Documentation
 

@@ -7,7 +7,7 @@ var index = require('..');
 var log = index.log;
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-zelcash');
+var bitcore = require('bitcore-lib');
 var BN = bitcore.crypto.BN;
 var async = require('async');
 var rimraf = require('rimraf');
@@ -26,7 +26,7 @@ var coinbasePrivateKey;
 var privateKey = bitcore.PrivateKey();
 var destKey = bitcore.PrivateKey();
 
-describe('Zelcashd Functionality', function() {
+describe('Fluxd Functionality', function() {
 
   before(function(done) {
     this.timeout(60000);
@@ -46,7 +46,7 @@ describe('Zelcashd Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/zelcashd')
+          exec: path.resolve(__dirname, '../bin/fluxd')
         },
         node: {
           network: regtestNetwork,
@@ -60,10 +60,10 @@ describe('Zelcashd Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for ZelCash to initialize...');
+      log.info('Waiting for Flux to initialize...');
 
       bitcoind.start(function() {
-        log.info('Zelcashd started');
+        log.info('Fluxd started');
 
         client = new BitcoinRPC({
           protocol: 'http',
